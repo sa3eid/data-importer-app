@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "01ad0e98-7297-490f-9817-ac655d7ecd4b",
+		"name": "ouredu-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13292920"
+	},
+	"item": [
+		{
+			"name": "list of users that combine transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/users?amountRange=100,300",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "statusCode",
+							"value": "3",
+							"description": "1-authorized, 2-declined, 3-refunded",
+							"disabled": true
+						},
+						{
+							"key": "currency",
+							"value": "USD",
+							"disabled": true
+						},
+						{
+							"key": "amountRange",
+							"value": "100,300",
+							"description": "minAmount,maxAmount (paidAmount)"
+						},
+						{
+							"key": "dateRange",
+							"value": "2021-10-01,2021-11-01",
+							"description": "minDate,maxDate",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
